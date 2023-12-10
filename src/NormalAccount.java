@@ -10,18 +10,12 @@ public class NormalAccount {
     private final String createdAt;
     private final ArrayList<Transaction> transactions = new ArrayList<Transaction>();
     private double totalWithdraw;
-    //    private final ArrayList<LoanAccount> lAccounts;
-//    private final ArrayList<SavingAccount> savingAccounts;
     private double blance;
     private ArrayList<Account> accounts;
     private String nameHolder;
 
     public NormalAccount(String name) {
         this.blance = BALANCE;
-//        this.transactions = new ArrayList<>();
-//        this.lAccounts = new ArrayList<>();
-//        this.savingAccounts = new ArrayList<>();
-
         this.id = AppService.generateAccountId();
         this.nameHolder = name.toUpperCase();
         this.accountNumber = AppService.generateAccountNumber();
@@ -111,7 +105,7 @@ public class NormalAccount {
         this.blance += _amount;
     }
 
-    protected double getBlance() {
+    protected double getBlanceAccount() {
         return this.blance;
     }
 
